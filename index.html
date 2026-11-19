@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Punjabi Adda Restaurant | Dhaba Wala Swaad</title>
+<meta name="description" content="Punjabi Adda Restaurant - sarson da saag, butter chicken, amritsari kulcha and pattiala lassi. Dhaba wala swaad, ghar wala pyaar. Order on WhatsApp.">
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Baloo+2:wght@400;600;700;800&family=Noto+Sans+Gurmukhi:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--yellow:#ffc928;--pink:#e6397a;--green:#1f7a3d;--orange:#ff7a1a;--ink:#1f1206;--paper:#fff4d6;--white:#fffdf6;--sh:6px 6px 0 var(--ink)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Baloo 2',sans-serif;background:var(--paper);color:var(--ink);line-height:1.5;overflow-x:hidden;font-size:17px}
+h1,h2,h3{font-family:'Yatra One',serif;font-weight:400;line-height:1.1}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+section{padding:72px 0}
+.phul{height:22px;background:linear-gradient(135deg,var(--pink) 25%,transparent 25%) -11px 0/22px 22px,linear-gradient(225deg,var(--pink) 25%,transparent 25%) -11px 0/22px 22px,linear-gradient(315deg,var(--pink) 25%,transparent 25%) 0 0/22px 22px,linear-gradient(45deg,var(--pink) 25%,var(--yellow) 25%) 0 0/22px 22px;border-block:3px solid var(--ink)}
+.kicker{display:inline-block;background:var(--ink);color:var(--yellow);padding:4px 14px;border-radius:999px;font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px}
+h2{font-size:clamp(2rem,6vw,3.3rem);margin-bottom:12px}
+h2 mark{background:var(--yellow);padding:0 10px;border:3px solid var(--ink);border-radius:10px;display:inline-block;transform:rotate(-2deg);box-shadow:4px 4px 0 var(--ink)}
+.lead{max-width:560px;font-size:1.05rem}
+.gur{font-family:'Noto Sans Gurmukhi',sans-serif;font-weight:700}
+nav{position:fixed;inset:0 0 auto 0;z-index:50;background:var(--yellow);border-bottom:3px solid var(--ink)}
+.nav-in{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:'Yatra One',serif;font-size:1.5rem;line-height:1}
+.logo span{color:var(--pink);-webkit-text-stroke:1px var(--ink)}
+.links{display:flex;gap:22px;align-items:center;font-weight:700}
+.links a:hover{color:var(--pink)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:14px;font-family:'Baloo 2',sans-serif;font-weight:800;font-size:1rem;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);cursor:pointer;transition:.15s;background:var(--white)}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.btn-pink{background:var(--pink);color:#fff}
+.btn-green{background:var(--green);color:#fff}
+.toggle{display:none;background:var(--white);border:3px solid var(--ink);border-radius:10px;font-size:1.4rem;padding:2px 10px;cursor:pointer}
+.hero{padding-top:110px;padding-bottom:60px;background:var(--yellow);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:900px;height:900px;right:-300px;top:-250px;background:repeating-conic-gradient(from 0deg,rgba(255,255,255,.35) 0 7deg,transparent 7deg 20deg);border-radius:50%;animation:spin 90s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;position:relative}
+.sat{display:inline-block;background:var(--ink);color:var(--yellow);padding:6px 16px;border-radius:999px;font-weight:800;margin-bottom:16px}
+.hero h1{font-size:clamp(2.7rem,9vw,5.4rem);margin-bottom:16px}
+.hero h1 mark{background:var(--pink);color:#fff;padding:0 12px;border:3px solid var(--ink);border-radius:14px;display:inline-block;transform:rotate(-2deg);box-shadow:5px 5px 0 var(--ink)}
+.hero p{font-size:1.12rem;max-width:480px;margin-bottom:26px;font-weight:600}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.plate{position:relative;aspect-ratio:1;max-width:380px;width:100%;margin-inline:auto;background:var(--white);border:4px solid var(--ink);border-radius:50%;box-shadow:10px 10px 0 var(--ink);display:grid;place-items:center;font-size:7.5rem}
+.plate span{animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px) rotate(4deg)}}
+.stk{position:absolute;padding:6px 14px;border:3px solid var(--ink);border-radius:12px;font-weight:800;font-size:.85rem;box-shadow:3px 3px 0 var(--ink)}
+.s1{background:var(--green);color:#fff;top:6%;left:-6%;transform:rotate(-8deg)}
+.s2{background:var(--pink);color:#fff;bottom:8%;right:-6%;transform:rotate(6deg)}
+.s3{background:var(--orange);color:var(--ink);bottom:-2%;left:6%;transform:rotate(-4deg)}
+.tick{background:var(--ink);color:var(--yellow);overflow:hidden;padding:12px 0;border-block:3px solid var(--ink)}
+.tick-track{display:flex;gap:40px;width:max-content;animation:run 30s linear infinite;font-family:'Yatra One',serif;font-size:1.25rem;white-space:nowrap}
+@keyframes run{to{transform:translateX(-50%)}}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.feat{padding:20px;border:3px solid var(--ink);border-radius:18px;box-shadow:var(--sh);background:var(--white);transition:.2s}
+.feat:hover{transform:rotate(-2deg) translateY(-4px)}
+.feat:nth-child(1){background:#ffe2ef}.feat:nth-child(2){background:#dff5e3}.feat:nth-child(3){background:#ffe9c9}.feat:nth-child(4){background:#fff1a6}
+.feat i{font-style:normal;font-size:2.2rem;display:block}
+.feat b{font-size:1.1rem}
+.feat small{display:block;font-weight:600;opacity:.8}
+#menu{background:var(--green);color:var(--white);border-block:3px solid var(--ink)}
+#menu h2 mark{color:var(--ink)}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 28px}
+.tab{padding:9px 20px;border-radius:999px;border:3px solid var(--ink);background:var(--white);color:var(--ink);cursor:pointer;font:800 .95rem 'Baloo 2',sans-serif;box-shadow:3px 3px 0 var(--ink);transition:.15s}
+.tab.active{background:var(--yellow);transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.list{display:none;grid-template-columns:1fr 1fr;gap:18px}
+.list.show{display:grid;animation:pop .35s}
+@keyframes pop{from{opacity:0;transform:scale(.97)}}
+.item{display:flex;gap:14px;padding:18px;background:var(--white);color:var(--ink);border:3px solid var(--ink);border-radius:18px;box-shadow:var(--sh);transition:.2s}
+.item:hover{transform:rotate(-1deg) translateY(-3px)}
+.item .ic{font-size:2.2rem}
+.item h3{font-size:1.2rem;display:flex;justify-content:space-between;gap:10px;margin-bottom:2px;align-items:center}
+.item h3 span{background:var(--pink);color:#fff;padding:1px 10px;border-radius:999px;border:2px solid var(--ink);font-family:'Baloo 2',sans-serif;font-weight:800;font-size:.95rem;white-space:nowrap}
+.item p{font-weight:600;font-size:.9rem;opacity:.8;line-height:1.35}
+.dot{display:inline-block;width:13px;height:13px;border:2px solid;border-radius:3px;position:relative;margin-right:7px;vertical-align:middle}
+.dot::after{content:"";position:absolute;inset:2px;border-radius:50%;background:currentColor}
+.veg{color:#1f9d43}.nv{color:#d62d20}
+.note{margin-top:20px;font-size:.85rem;font-weight:600;opacity:.85}
+.spl{display:grid;grid-template-columns:1.3fr .7fr;gap:0;border:4px solid var(--ink);border-radius:26px;box-shadow:10px 10px 0 var(--ink);overflow:hidden;background:var(--pink);color:#fff}
+.spl>div{padding:40px}
+.spl h2{color:#fff}
+.spl p{font-weight:600;margin-bottom:20px;max-width:440px}
+.spl .big{background:var(--yellow);color:var(--ink);display:grid;place-items:center;text-align:center;border-left:4px solid var(--ink)}
+.big b{font-family:'Yatra One',serif;font-size:3.4rem;display:block;line-height:1}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px}
+.g{aspect-ratio:1;display:grid;place-items:center;font-size:3.2rem;border:3px solid var(--ink);border-radius:18px;box-shadow:var(--sh);transition:.2s}
+.g:hover{transform:rotate(3deg) scale(1.04)}
+.g:nth-child(4n+1){background:#ffe2ef}.g:nth-child(4n+2){background:#dff5e3}.g:nth-child(4n+3){background:#ffe9c9}.g:nth-child(4n){background:#fff1a6}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.rev{padding:22px;background:var(--white);border:3px solid var(--ink);border-radius:18px;box-shadow:var(--sh)}
+.rev:nth-child(2){transform:rotate(1.5deg)}.rev:nth-child(1){transform:rotate(-1.5deg)}
+.stars{color:var(--orange);letter-spacing:3px;font-size:1.2rem;-webkit-text-stroke:1px var(--ink)}
+.rev p{font-weight:600;margin:6px 0 10px}
+#contact{background:var(--yellow);border-top:3px solid var(--ink)}
+.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.info{display:grid;gap:14px;margin-top:18px}
+.info div{display:flex;gap:14px;padding:14px 18px;background:var(--white);border:3px solid var(--ink);border-radius:16px;box-shadow:4px 4px 0 var(--ink);align-items:center}
+.info small{display:block;font-weight:600}
+form{display:grid;gap:12px;padding:26px;background:var(--white);border:3px solid var(--ink);border-radius:20px;box-shadow:var(--sh)}
+input,select,textarea{width:100%;padding:12px 14px;border:3px solid var(--ink);border-radius:12px;background:var(--paper);font:600 1rem 'Baloo 2',sans-serif;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:3px solid var(--pink)}
+textarea{min-height:76px;resize:vertical}
+footer{background:var(--ink);color:var(--yellow);text-align:center;padding:28px 0 100px;font-weight:600}
+.float{position:fixed;right:14px;bottom:14px;z-index:60;display:flex;flex-direction:column;gap:10px}
+.float a{padding:11px 20px;border-radius:14px;font-weight:800;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);text-align:center}
+.wa{background:#25d366;color:var(--ink)}.call{background:var(--pink);color:#fff}
+.reveal{opacity:0;transform:translateY(24px);transition:.7s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:860px){
+ section{padding:54px 0}
+ .links{position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--yellow);padding:20px;gap:14px;border-bottom:3px solid var(--ink);display:none}
+ .links.open{display:flex}
+ .toggle{display:block}
+ .logo{font-size:1.05rem}
+ .hero-grid,.about,.cgrid,.spl{grid-template-columns:1fr}
+ .plate{max-width:270px;font-size:5.5rem}
+ .list,.revs{grid-template-columns:1fr}
+ .gal{grid-template-columns:repeat(2,1fr)}
+ .spl .big{border-left:0;border-top:4px solid var(--ink);padding:26px}
+ .rev:nth-child(n){transform:none}
+ .float{flex-direction:row;left:12px;right:12px;bottom:12px}
+ .float a{flex:1;padding:11px 6px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+ <div class="wrap nav-in">
+  <a href="#home" class="logo">Punjabi Adda <span>Restaurant</span></a>
+  <button class="toggle" id="toggle" aria-label="Menu">☰</button>
+  <div class="links" id="links">
+   <a href="#about">Our Adda</a><a href="#menu">Menu</a><a href="#gallery">Gallery</a><a href="#reviews">Yaaran Di Gallan</a><a href="#contact">Contact</a>
+   <a href="#contact" class="btn btn-pink">Seat Book Karo</a>
+  </div>
+ </div>
+</nav>
+
+<header class="hero" id="home">
+ <div class="wrap hero-grid">
+  <div>
+   <span class="sat gur">ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ 🙏</span>
+   <div><span class="kicker" style="background:var(--pink);color:#fff;border:3px solid var(--ink);font-size:.9rem">Punjabi Adda Restaurant</span></div>
+   <h1>Aao, <mark>Adda</mark> jamao, pet bhar ke khao!</h1>
+   <p>Dhaba wala swaad, ghar wala pyaar. Sarson da saag, makki di roti, butter chicken aur thandi lassi, sab kuch garma garam, desi ghee de tadke naal.</p>
+   <div class="cta">
+    <a href="#menu" class="btn btn-pink">Menu Dekho 🍛</a>
+    <a href="https://wa.me/918053150707?text=Sat%20Sri%20Akal%2C%20Punjabi%20Adda%20Restaurant%20se%20order%20karna%20hai" class="btn btn-green">WhatsApp Order 💬</a>
+   </div>
+  </div>
+  <div class="plate">
+   <span>🍛</span>
+   <div class="stk s1">Desi Ghee Wala 🧈</div>
+   <div class="stk s2">Balle Balle! 🥁</div>
+   <div class="stk s3">Pattiala Lassi 🥛</div>
+  </div>
+ </div>
+</header>
+<div class="phul"></div>
+
+<div class="tick">
+ <div class="tick-track">
+  <span>Balle Balle ✦ Desi Ghee Da Tadka ✦ Charpai Seating ✦ Pattiala Lassi ✦ Chak De Phatte ✦ Sarson Da Saag ✦ Dhol Night Saturdays ✦</span>
+  <span>Balle Balle ✦ Desi Ghee Da Tadka ✦ Charpai Seating ✦ Pattiala Lassi ✦ Chak De Phatte ✦ Sarson Da Saag ✦ Dhol Night Saturdays ✦</span>
+ </div>
+</div>
+
+<section id="about">
+ <div class="wrap about">
+  <div class="reveal">
+   <span class="kicker">Sadda Adda</span>
+   <h2>Punjab di <mark>mitti</mark>, ghar da swaad.</h2>
+   <p class="lead">Yahan har sabzi dhimi aanch te pakti hai, har roti tandoor ton garma garam aundi hai, te har mehmaan nu parivaar vaangu pyaar milda hai. Dost-yaar, parivaar, sab nu leke aao, kyunki khaana akele nahi, mehfil naal hi changa lagda hai.</p>
+  </div>
+  <div class="feats reveal">
+   <div class="feat"><i>🛏️</i><b>Charpai Seating</b><small>Dhaba style, aaram naal baitho</small></div>
+   <div class="feat"><i>🔥</i><b>Tandoor Tadka</b><small>Garma garam, seedha bhatti ton</small></div>
+   <div class="feat"><i>🥁</i><b>Dhol Night</b><small>Har Saturday raat live masti</small></div>
+   <div class="feat"><i>🛵</i><b>Home Delivery</b><small>WhatsApp te order karo</small></div>
+  </div>
+ </div>
+</section>
+
+<section id="menu">
+ <div class="wrap">
+  <span class="kicker" style="background:var(--yellow);color:var(--ink)">Adda Da Menu</span>
+  <h2>Ki khana <mark>pasand</mark> karoge?</h2>
+  <p class="lead">Category chuno te dekho.</p>
+  <div class="tabs">
+   <button class="tab active" data-t="tandoor">Tandoori Tadka</button>
+   <button class="tab" data-t="sabzi">Sabzi &amp; Dal</button>
+   <button class="tab" data-t="parathe">Parathe &amp; Kulche</button>
+   <button class="tab" data-t="meetha">Lassi &amp; Meetha</button>
+  </div>
+
+  <div class="list show" id="tandoor">
+   <div class="item"><div class="ic">🧀</div><div><h3><b><i class="dot veg"></i>Amritsari Paneer Tikka</b><span>₹260</span></h3><p>Ajwain te masale vich lipta paneer, tandoor ton seedha.</p></div></div>
+   <div class="item"><div class="ic">🍗</div><div><h3><b><i class="dot nv"></i>Tandoori Chicken (Half)</b><span>₹340</span></h3><p>Dahi te desi masale vich marinate, dhuye wala swaad.</p></div></div>
+   <div class="item"><div class="ic">🌿</div><div><h3><b><i class="dot veg"></i>Achari Soya Chaap</b><span>₹220</span></h3><p>Achaari masale vich bhuni hoyi chaap, zabardast.</p></div></div>
+   <div class="item"><div class="ic">🐟</div><div><h3><b><i class="dot nv"></i>Amritsari Fish Fry</b><span>₹360</span></h3><p>Besan di crispy parat, nimbu te chutney naal.</p></div></div>
+  </div>
+
+  <div class="list" id="sabzi">
+   <div class="item"><div class="ic">🥬</div><div><h3><b><i class="dot veg"></i>Sarson Da Saag</b><span>₹240</span></h3><p>Makkhan naal, makki di roti nu pair karo (sardiyan special).</p></div></div>
+   <div class="item"><div class="ic">🍲</div><div><h3><b><i class="dot veg"></i>Dal Makhani</b><span>₹220</span></h3><p>Raat bhar pakayi, makhan te malai naal.</p></div></div>
+   <div class="item"><div class="ic">🍛</div><div><h3><b><i class="dot nv"></i>Butter Chicken</b><span>₹330</span></h3><p>Adde da star, makhni gravy vich naram chicken.</p></div></div>
+   <div class="item"><div class="ic">🥘</div><div><h3><b><i class="dot veg"></i>Kadhai Paneer</b><span>₹270</span></h3><p>Mote masale, shimla mirch te taaza paneer.</p></div></div>
+  </div>
+
+  <div class="list" id="parathe">
+   <div class="item"><div class="ic">🫓</div><div><h3><b><i class="dot veg"></i>Aloo Pyaaz Paratha</b><span>₹90</span></h3><p>Makkhan te dahi naal, nashte da raja.</p></div></div>
+   <div class="item"><div class="ic">🥙</div><div><h3><b><i class="dot veg"></i>Amritsari Kulcha</b><span>₹120</span></h3><p>Chole te imli di chutney naal garma garam.</p></div></div>
+   <div class="item"><div class="ic">🍛</div><div><h3><b><i class="dot veg"></i>Chole Bhature</b><span>₹150</span></h3><p>Phuli hoyi bhature te masaledaar chole.</p></div></div>
+   <div class="item"><div class="ic">🌽</div><div><h3><b><i class="dot veg"></i>Makki Di Roti</b><span>₹60</span></h3><p>Desi ghee laga ke, saag de naal parfect.</p></div></div>
+  </div>
+
+  <div class="list" id="meetha">
+   <div class="item"><div class="ic">🥛</div><div><h3><b><i class="dot veg"></i>Pattiala Lassi</b><span>₹100</span></h3><p>Vadda glass, malai te makhan di moti parat.</p></div></div>
+   <div class="item"><div class="ic">🌸</div><div><h3><b><i class="dot veg"></i>Kesar Lassi</b><span>₹120</span></h3><p>Kesar te elaichi di khushboo wali thandi lassi.</p></div></div>
+   <div class="item"><div class="ic">🥕</div><div><h3><b><i class="dot veg"></i>Gajar Da Halwa</b><span>₹120</span></h3><p>Desi ghee vich pakka, garma garam.</p></div></div>
+   <div class="item"><div class="ic">🍚</div><div><h3><b><i class="dot veg"></i>Kheer</b><span>₹100</span></h3><p>Dudh te chawal di malaidaar, dhimi aanch di kheer.</p></div></div>
+  </div>
+  <p class="note">* Demo menu. Dishes and prices are sample content.</p>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="spl reveal">
+   <div>
+    <span class="kicker">Adda Special</span>
+    <h2>Sat Sri Akal Thali</h2>
+    <p>Dal makhani, paneer sabzi, 4 tandoori roti, jeera rice, salad, papad te meetha, ik thali vich poora Punjab. Pehla ton order kar do.</p>
+    <a href="https://wa.me/918053150707?text=Sat%20Sri%20Akal%2C%20mujhe%20Adda%20Thali%20chahiye" class="btn">Thali Order Karo 🍽️</a>
+   </div>
+   <div class="big"><div><b>₹299</b><span style="font-weight:800">Demo price</span></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="gallery" style="padding-top:10px">
+ <div class="wrap">
+  <span class="kicker">Gallery</span>
+  <h2>Adde di <mark>jhalak</mark></h2>
+  <div class="gal reveal">
+   <div class="g">🍛</div><div class="g">🫓</div><div class="g">🥛</div><div class="g">🍗</div>
+   <div class="g">🥬</div><div class="g">🥁</div><div class="g">🧀</div><div class="g">🌾</div>
+  </div>
+ </div>
+</section>
+
+<section id="reviews" style="background:#ffe2ef;border-block:3px solid var(--ink)">
+ <div class="wrap">
+  <span class="kicker">Reviews</span>
+  <h2>Yaaran di <mark>gallan</mark></h2>
+  <div class="revs">
+   <div class="rev reveal"><div class="stars">★★★★★</div><p>Butter chicken te makki di roti ne dil jit liya. Bilkul dhaba wala swaad!</p><b>Sample Guest A</b></div>
+   <div class="rev reveal"><div class="stars">★★★★★</div><p>Parivaar naal gaye, charpai te baith ke khaaya. Maza aa gaya, lassi kamaal si.</p><b>Sample Guest B</b></div>
+   <div class="rev reveal"><div class="stars">★★★★★</div><p>Birthday party layi thali mangayi, sab ne tareef kiti. Service vi tez.</p><b>Sample Guest C</b></div>
+  </div>
+  <p class="note">* Demo reviews. Replace with real customer reviews.</p>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="wrap cgrid">
+  <div class="reveal">
+   <span class="kicker">Aa Jao Adde Te</span>
+   <h2>Seat <mark>book</mark> karo!</h2>
+   <div class="info">
+    <div><span style="font-size:1.6rem">📍</span><p><b>Address</b><small>Main Market, Sonipat, Haryana (demo address)</small></p></div>
+    <div><span style="font-size:1.6rem">🕐</span><p><b>Timings</b><small>Roz · 11:00 AM – 11:30 PM</small></p></div>
+    <div><span style="font-size:1.6rem">📞</span><p><b>Call / WhatsApp</b><small>+91 80531 50707</small></p></div>
+   </div>
+  </div>
+  <form id="bookForm" class="reveal">
+   <h3 style="font-size:1.6rem">Table Book Karo</h3>
+   <input type="text" id="gname" placeholder="Tuhada naam" required>
+   <input type="date" id="gdate" required>
+   <select id="gcount"><option>2 bande</option><option>3-4 bande</option><option>5-8 bande</option><option>9+ bande (party)</option></select>
+   <textarea id="gmsg" placeholder="Koi khaas request?"></textarea>
+   <button type="submit" class="btn btn-pink" style="justify-content:center">WhatsApp te bhejo</button>
+  </form>
+ </div>
+</section>
+<div class="phul"></div>
+
+<footer><div class="wrap">© 2026 Punjabi Adda Restaurant · Demo website · Punjabi dil, desi swaad ❤️</div></footer>
+
+<div class="float">
+ <a class="call" href="tel:+918053150707">📞 Call Karo</a>
+ <a class="wa" href="https://wa.me/918053150707?text=Sat%20Sri%20Akal%20Punjabi%20Adda%20Restaurant">💬 WhatsApp</a>
+</div>
+
+<script>
+var links=document.getElementById('links');
+document.getElementById('toggle').onclick=function(){links.classList.toggle('open')};
+links.querySelectorAll('a').forEach(function(a){a.onclick=function(){links.classList.remove('open')}});
+
+document.querySelectorAll('.tab').forEach(function(btn){
+ btn.onclick=function(){
+  document.querySelectorAll('.tab').forEach(function(b){b.classList.remove('active')});
+  document.querySelectorAll('.list').forEach(function(m){m.classList.remove('show')});
+  btn.classList.add('active');
+  document.getElementById(btn.dataset.t).classList.add('show');
+ };
+});
+
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+var WA_NUMBER='918053150707';
+document.getElementById('bookForm').onsubmit=function(e){
+ e.preventDefault();
+ var g=function(id){return encodeURIComponent(document.getElementById(id).value)};
+ var t='Sat Sri Akal Punjabi Adda Restaurant! Mujhe table book karna hai.%0ANaam: '+g('gname')+'%0ADate: '+g('gdate')+'%0ABande: '+g('gcount')+'%0ARequest: '+g('gmsg');
+ window.open('https://wa.me/'+WA_NUMBER+'?text='+t,'_blank');
+};
+</script>
+</body>
+</html>
